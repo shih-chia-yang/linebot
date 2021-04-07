@@ -1,11 +1,17 @@
 from flask import Flask
+from flask import request
 from sqlalchemy import true
+ 
 app=Flask(__name__)
 
-@app.route('/')
+@app.route('/',methods=['GET'])
 @app.route('/index')
 def index():
-    return 'hello world'
+    name=request.args.get('name')
+    if bool(name) == True:
+        return f'hello {name}'
+    else:
+        return 'hello world'
 
 @app.route('/about/<string:name>')
 def about(name):

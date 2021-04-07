@@ -57,5 +57,27 @@ app.run(host='0.0.0.0',port=80,debug=false)
 @app.route('/about/<string:name>')
 def about(name):
     process
-
 ```
+
+- 用get傳遞參數，`@app.route('\url',methods=['GET'])`
+    - 接收get參數，匯入request模組。from flask import request
+    - request.args.get('arg name')
+
+```python
+from flask import Flask
+from flask import request
+
+app=Flask(__name__)
+
+@app.route('/',methods=['GET'])
+def index():
+    name=request.args.get('name')
+    return f' hello {name}'
+```
+
+> [!TIP]
+> 匯入request 模組
+> 以GET方式建立route
+> 取得GET方式傳送的參數值並賦值
+> 進行處理與返回結果
+> 函式不需增加參數
