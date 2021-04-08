@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import request
 from flask import render_template
+from datetime import datetime
  
 app=Flask(__name__)
 
@@ -8,10 +9,8 @@ app=Flask(__name__)
 @app.route('/index')
 def index():
     name=request.args.get('name')
-    if bool(name) == True:
-        return f'hello {name}'
-    else:
-        return render_template('hello.html')
+    now =datetime.now()
+    return render_template('hello.html',**locals())
 
 @app.route('/about/<string:name>')
 def about(name):

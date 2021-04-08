@@ -107,3 +107,20 @@ render_template('網頁檔案名稱')
 ```
 
 3. flask的網頁檔案需放在flask程式路徑的templates資料夾中，系統才能讀取
+
+
+- 傳送參數及變數給網頁檔案
+
+1. 在route設定參數
+```python
+@app.route('/url/<string:name>')
+
+```
+
+2. 在render_template加入第二個參數
+```python
+#**locals() 指傳送所有參數與區域變數
+render_template('html filename',**locals())
+```
+
+3. 網頁中接收參數的方法是將參數名稱以{{`variable`}}包起來
