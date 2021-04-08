@@ -81,3 +81,14 @@ def index():
 > 取得GET方式傳送的參數值並賦值
 > 進行處理與返回結果
 > 函式不需增加參數
+
+- post 傳遞參數
+```python
+@app.route('url',methods=['GET','POST'])
+```
+- 取得post參數
+```python
+from flask import request
+
+request.values('<arg name>')
+```
