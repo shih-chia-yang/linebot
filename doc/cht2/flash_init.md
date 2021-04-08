@@ -92,3 +92,18 @@ from flask import request
 
 request.values('<arg name>')
 ```
+
+- 使用template
+flask 提供template功能，可以直接顯示html content 簡化產生網頁的工作
+
+1. 匯入render_template
+```python
+form flask import render_template
+```
+
+2. 讀取網頁檔案
+```python
+render_template('網頁檔案名稱')
+```
+
+3. flask的網頁檔案需放在flask程式路徑的templates資料夾中，系統才能讀取

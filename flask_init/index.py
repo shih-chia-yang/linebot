@@ -1,6 +1,6 @@
 from flask import Flask
 from flask import request
-from sqlalchemy import true
+from flask import render_template
  
 app=Flask(__name__)
 
@@ -11,7 +11,7 @@ def index():
     if bool(name) == True:
         return f'hello {name}'
     else:
-        return 'hello world'
+        return render_template('hello.html')
 
 @app.route('/about/<string:name>')
 def about(name):
