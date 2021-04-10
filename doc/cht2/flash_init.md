@@ -124,3 +124,15 @@ render_template('html filename',**locals())
 ```
 
 3. 網頁中接收參數的方法是將參數名稱以{{`variable`}}包起來
+
+
+- 網頁檔使用靜態檔案
+
+1. 網頁中常會使用靜態檔案，如圖片、樣式檔案等。一般會將靜態檔案置於<staic>資料夾中。
+```python
+{{url_for('static',filename=靜態檔案名稱)}}
+```
+例如使用static/ball.png
+```python
+{{url_for('static',filename='ball.png')}}
+```

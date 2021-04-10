@@ -3,9 +3,13 @@
     <head>
         <meta charset='utf-8'>
         <title>first template</title>
+        <link rel='stylesheet' href='{{url_for('static',filename='style1.css')}}'/>
     </head>
     <body>
-        <h1>first flask website</h1>
+        <h1>first flask website
+        
+        <img src='{{url_for('static',filename='python_icon.png')}}'
+        </h1>
         <h2>{{name}} welcome to here</h2>
         <h4>{{now}}</h4>
     </body>
