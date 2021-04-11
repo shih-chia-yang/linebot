@@ -32,6 +32,15 @@ def login():
             <p><button type='submit'>confirm</button></p>
         </form>
     """
+    
+
+@app.route('/show')
+def show():
+    persion1={"name":"amy","phone":"049-1234567","age":20}
+    persion2={"name":"jack","phone":"02-4455666","age":25}
+    persion3={"name":"nacy","phone":"04-9876543","age":17}
+    persons=[persion1,persion2,persion3]
+    return render_template('show.html',**locals())
 
 if __name__=='__main__':
     app.run()

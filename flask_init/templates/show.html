@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <h3>
+        {% for person in persons %}
+            <ul>
+                <li>姓名: {{person.name}}</li>
+                <li>手機: {{person.phone}}</li>
+                <li>年紀: {{person.age}}</li>
+            </ul>
+        {% endfor %}
+        </h3>
+    </body>
+</html>
